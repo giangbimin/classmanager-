@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-['admin', 'subadmin', 'staff', 'mentor', 'student', 'register'].each do |role|
-  Role.find_or_create_by({ name: role })
-end
+# ['admin', 'subadmin', 'staff', 'mentor', 'student', 'register'].each do |role|
+#   Role.find_or_create_by({ name: role })
+# end
+20.times { FactoryGirl.create(:user) }
