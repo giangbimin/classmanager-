@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   # scope :student, -> { joins(:roles).where("roles.name = ?", 'student') }
   # scope :except_mentor, -> { joins(:roles).where.not("roles.name = ?", 'mentor') }
-  default_scope { order('created_at DESC') }
+  # default_scope { order('created_at DESC') }
 
   def admin?
     self.role_id == Role.find_by_name('admin').id
