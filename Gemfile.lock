@@ -76,7 +76,8 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    ffaker (2.4.0)
+    faker (1.7.2)
+      i18n (~> 0.5)
     ffi (1.9.14)
     formatador (0.2.5)
     globalid (0.3.7)
@@ -242,7 +243,7 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_girl_rails
-  ffaker
+  faker
   guard
   guard-rspec
   jbuilder (~> 2.5)

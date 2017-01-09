@@ -54,6 +54,10 @@ class User < ApplicationRecord
   private
 
   def default_role
-    User.count.zero? ? self.role_id = Role.find_by_name('admin').id : self.role_id = Role.find_by_name('register').id
+    if User.count.zero?
+      self.role_id = Role.find_by_name('admin').id 
+    else
+      self.role_id = Role.find_by_name('register').id if self.role_id.nil?
+    end
   end
 end
